@@ -1,16 +1,17 @@
 #pragma once
+#include"State.h"
 
-#include "State.h"
+using namespace std;
 
 class Friend
 {
-	State *current;
+	class State *current;
 
 public:
 	void goWalk();
 	void goUniversity();
 	void playPC();
-	void changeState();
+	void changeState(enum states);
 	void setCurrent(State *);
-	Friend(states);
+	Friend(enum states);
 };

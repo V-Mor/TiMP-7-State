@@ -1,6 +1,7 @@
 #pragma once
 
 #include<iostream>
+#include"Friend.h"
 
 using namespace std;
 
@@ -9,7 +10,7 @@ enum states { normal = 0, busy, ill  };
 class State
 {
 protected:
-	Friend *pf;
+	class Friend *pf;
 
 public:
 	virtual void goWalk() = 0;

@@ -1,4 +1,5 @@
 #include "Friend.h"
+#include "State.h"
 
 void Friend::goWalk()
 {
@@ -15,9 +16,9 @@ void Friend::playPC()
 	current->playPC();
 }
 
-void Friend::changeState()
+void Friend::changeState(states st)
 {
-	current->playPC();
+	current->changeState(st);
 }
 
 void Friend::setCurrent(State *st)
