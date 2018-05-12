@@ -2,30 +2,38 @@
 
 void Friend::goWalk()
 {
-
+	current->goWalk();
 }
 
 void Friend::goUniversity()
 {
-
+	current->goUniversity();
 }
 
 void Friend::playPC()
 {
+	current->playPC();
+}
 
+void Friend::changeState()
+{
+	current->playPC();
+}
+
+void Friend::setCurrent(State *st)
+{
+	current = st;
 }
 
 Friend::Friend(states st)
 {
 	switch (st)
 	{
-	case normal: 
+	case normal: current = new Normal(this);
 		break;
-	case busy:
+	case busy: current = new Busy(this);
 		break;
-	case ill:
-		break;
-	default:
+	case ill: current = new Ill(this);
 		break;
 	}
 }

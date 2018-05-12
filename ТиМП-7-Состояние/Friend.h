@@ -10,5 +10,7 @@ public:
 	void goWalk();
 	void goUniversity();
 	void playPC();
+	void changeState();
+	void setCurrent(State *);
 	Friend(states);
 };
